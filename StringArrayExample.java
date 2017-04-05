@@ -2,7 +2,7 @@
  * Created by danawacomputer on 2017-04-05.
  */
 public class StringArrayExample {
-    public static void main(String[] args){
+            public static void main(String[] args){
 
         //1. 각 엘레먼트의 글자 수의 평균 구하기
 
@@ -37,7 +37,7 @@ public class StringArrayExample {
         }
 
         for(int idx = 0; idx < arr3UnderCount; idx++){
-            System.out.println(strArr2[idx] + " ");
+            System.out.println("[" + idx + "] = " + strArr2[idx]);
         }
     }
 }
