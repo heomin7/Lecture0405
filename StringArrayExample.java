@@ -13,31 +13,38 @@ public class StringArrayExample {
                 "마루가메제면", "킹콩부대찌개", "바른식탁", "말뚝곱창", "보나베띠", "춘자싸롱"};
 
         int lengthSum = 0;
-        int strCount = 0;
         double lengthAverage = 0;
 
         for(int idx = 0; idx < strArr.length; idx++){
             lengthSum += strArr[idx].length();
-            strCount++;
         }
 
-        lengthAverage = lengthSum / (double)strCount;
+        lengthAverage = lengthSum / (double)strArr.length;
 
-        System.out.println("average: " + lengthAverage);
+        System.out.println("Array length average: " + lengthAverage);
 
-        String[] strArr2 = new String[30];
+        String[] str3UnderArray = new String[strArr.length];
         int arr3UnderCount = 0;
-
+/*
         for(int idx = 0; idx < strArr.length; idx++){
             strArr[idx] = strArr[idx].replace(" ", "");
 
             if(strArr[idx].length() <= 3) {
-                strArr2[arr3UnderCount++] = strArr[idx];
+                str3UnderArray[arr3UnderCount++] = strArr[idx];
+            }
+        }
+ */
+        int arr3Undercount = 0;
+        for(String e: strArr){
+            e = e.replace(" ", "");
+            if(e.length() <= 3){
+                str3UnderArray[arr3Undercount++] = e;
             }
         }
 
-        for(int idx = 0; idx < arr3UnderCount; idx++){
-            System.out.println("[" + idx + "] = " + strArr2[idx]);
+
+        for(int idx = 0; idx < arr3Undercount; idx++){
+            System.out.println("[" + idx + "] = " + str3UnderArray[idx]);
         }
     }
 }

@@ -37,18 +37,20 @@ public class ArrayExample {
                 else System.out.println(iArr2[i]);
         }
 
+        //accumulate
         int sum = 0;
-        int count = 0;
-        double average = 0.0;
+        int countOfArray = 0;
+        double averageOfArray = 0.0;
 
-        for(int j = 0; j < iArr2.length; j++){
-            sum += j;
-            count++;
+        for(int e: iArr2){
+            sum += e;
         }
 
-        average = sum/(double)count;
+        countOfArray = iArr2.length;
 
-        System.out.println("sum: " + sum + ", average: " + average);
+        averageOfArray = sum/(double)countOfArray;
+
+        System.out.println("sum: " + sum + ", average: " + averageOfArray);
 
     }
 }
